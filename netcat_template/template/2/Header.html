@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>La provance</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="<?=$nc_parent_template_folder_path?>css/bootstrap.css" rel="stylesheet" media="screen">
+	<link href="<?=$nc_parent_template_folder_path?>css/mobile.css" rel="stylesheet" media="only screen and (max-width:839px)">
+	<link href="<?=$nc_parent_template_folder_path?>css/tablet.css" rel="stylesheet" media="only screen and (min-width:840px) and (	max-width:1199px)">
+	<link href="<?=$nc_parent_template_folder_path?>css/display.css" rel="stylesheet" media="only screen and (min-width:1200px)">
+	<link href="<?=$nc_parent_template_folder_path?>css/style.css" rel="stylesheet" media="only screen">
+	<link href="<?=$nc_parent_template_folder_path?>css/hover.css" rel="stylesheet" media="screen">
+	<link href="<?=$nc_parent_template_folder_path?>css/fonts.css" rel="stylesheet" media="screen">
+	<link href="<?=$nc_parent_template_folder_path?>css/sprites-basket.css" rel="stylesheet" media="screen">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/_cdn/owl/owl.carousel.css" rel="stylesheet">
+</head>
+<body>
+<a name="top"></a>
+<div class="wrap basket registretion card">
+	<header>
+		<div class="container">
+			<div class="row text-right login">
+                <form action='/search' method='GET'>
+                <? if (!$AUTH_USER_ID) {?>
+                    <a href="/registratsiya/" class="register">Регистрация </a>
+                    <a href="/enter/" class="enter">вход </a>
+                <? } else { ?>
+                    <span style='color:#846c67'>
+                        Вы авторизованы как
+                        <b style='color:#ff8888'>
+                            <?=$current_user['ForumName']; ?>
+                        </b>
+                    </span>
+                    <a href='/_cdn/logoff.php'>Выход</a>
+                <? } ?>
+    				<input name="text" class="serch-fild">
+				<button type="button" class="serch" id="serch"></button>
+                </form>
+			</div>
+			<div class="row text-center">
+				<div class="col-xs-12">
+					<a href="/" class="text-center">
+						<img src="<?=$nc_parent_template_folder_path?>images/logo.png" class="img-responsive logo" alt="">
+					</a>
+					<p class="disk-shope">
+						магазин домашнего текстиля
+					</p>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="navbar">
+		<div class="container">
+			<div class="navbar-header">
+				<div class="col-xs-12">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu">
+							<span class="sr-only">Открыть навигацию</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+					</button>
+				</div>
+			</div>
+			<div class="navbar-right text-right">
+				<a href="/cart/" class="basket-link">
+					...
+				</a>
+			</div>
+			<div class="collapse navbar-collapse" id="responsive-menu">
+                <?= nc_browse_sub(0, $mainMenuTemp); ?>
+			</div>
+		</div>
+	</div>
+	<div class="ellipses"></div>

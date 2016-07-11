@@ -1,0 +1,20 @@
+<!-- FormPrefix --><!-- /FormPrefix -->
+
+<!-- RecordTemplate --><div style='border:1px solid #ccc; padding:15px; margin-bottom:15px;'>
+<?= $f_AdminButtons?>
+<h3><?=$f_Name?></h3>
+<h3><?=$f_Phone?></h3>
+<h3><?=$f_Email?></h3>
+<?=$f_User_ID ? "<h3>ID пользователя: ".$f_User_ID."</h3>" : null ?>
+<?
+    $goods = json_decode(htmlspecialchars_decode($f_Goods));
+    echo "<ol>";
+    foreach($goods as $key=>$value){
+        $good = $db->get_row("SELECT * FROM Message8 WHERE Message_ID = '".$key."'");
+        echo "<li><a target='_blank' href='".nc_message_link($key, 8)."'>".$good->Name."</a>, ".$value." шт. </li>";
+    }
+    echo "<ol>";
+?>
+</div><!-- /RecordTemplate -->
+
+<!-- FormSuffix --><!-- /FormSuffix -->

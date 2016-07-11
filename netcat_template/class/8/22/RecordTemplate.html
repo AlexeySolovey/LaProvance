@@ -1,0 +1,18 @@
+<?/* Служебная часть */for ($f_RowNum = 0; $f_RowNum < $rowCount; $f_RowNum++) {    if($fetch_row[$f_RowNum] instanceof Iterator) {        extract($fetch_row[$f_RowNum]->to_array(), EXTR_PREFIX_ALL, "f");    } else {        extract($fetch_row[$f_RowNum], EXTR_PREFIX_ALL, "f");    }    foreach($iteration_RecordTemplate[$f_RowNum] as $value) {        extract($value);    }    eval($cc_env["convert2txt"]);    ob_start();/* Конец служебной части */?>
+<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+  <a href="<?=$fullLink?>">
+    <img src="<?=$f_Image?>" class="img-responsive">
+  </a>
+  <div class="information">
+    <p class="describe"><?=$f_Name?></p>
+    <? if($f_Size) { ?>
+    <p class="size"><?=$f_Size?></p>
+    <? } ?>
+    <? if($f_Price_OLD) { ?>
+    <span class="past-price"><?=number_format($f_Price_OLD,2,","," ")?> грн</span>
+    <? } ?>
+    <span class="now-price"><?=number_format($f_Price,2,","," ")?> грн</span>
+    <button type="button" onclick="addToCart(<?=$f_RowID?>); document.location.reload();" class="hvr-outline-out">В КОРЗИНУ</button>
+  </div>
+</div>
+<?/* Служебная часть */    echo nc_finishing_RecordTemplate(ob_get_clean(), $inside_admin, $classID, $f_RowID, $parent_message, $cc, $cc_env["Class_Name"], $no_cache_marks);}/* Конец служебной части */?>

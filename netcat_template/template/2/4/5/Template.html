@@ -1,0 +1,80 @@
+<!-- Header -->%HEADER
+
+<? if (!$AUTH_USER_ID) { ?>
+
+    <div class="register-block">
+					<form action="/_cdn/auth.php" method="POST" id="form" novalidate="novalidate">
+                        <input type='hidden' name='reg' value='true'>
+						<div class="message"></div>
+						<table>
+							<tbody><tr>
+								<th>Зарегистрироваться</th>
+							</tr>
+							<tr>
+								<td class="star">Е-mail</td>
+								<td><input type="text" name="email" value="<?=$_POST['mail']?>"></td>
+							</tr>
+							<tr>
+								<td>Телефон</td>
+								<td><input type="text" name="phone" size="14"></td>
+							</tr>
+							<tr>
+								<td>Имя</td>
+								<td><input type="text" name="name"></td>
+							</tr>
+							<tr>
+								<td>Фамилия</td>
+								<td><input type="text" name="surname" size="14"></td>
+							</tr>
+							<tr>
+								<td>Город</td>
+								<td><input type="text" name="city" size="14"></td>
+							</tr>
+							<tr>
+								<td class="star margin">Пароль</td>
+								<td class="margin"><input type="text" size="14" name="password" id="passId"></td>
+							</tr>
+							<tr>
+								<td class="star">Подтверждение пароля</td>
+								<td><input type="text" size="14" name="password2"></td>
+							</tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="text-center">
+                                        <button type="submit" class="hvr-outline-out">Зарегистрироваться</button>
+                                    </div>
+                                </td>
+                            </tr>
+						</tbody></table>
+                    </form>
+					<form action="/_cdn/auth.php" method="POST" id="form" novalidate="novalidate">
+                        <input type='hidden' name='reg' value='true'>
+						<div class="fields">
+							<label>Зарегистрироваться</label>
+							<label class="star">Е-mail</label>
+							<input type="text" name="email" value="<?=$_POST['mail']?>">
+							<label>Телефон</label>
+							<input type="text" name="phone" size="14">
+							<label>Имя</label>
+							<input type="text" name="name">
+							<label>Фамилия</label>
+							<input type="text" name="surname" size="14">
+							<label>Город</label>
+							<input type="text" name="city" size="14">
+							<label class="star margin">Пароль</label>
+							<input type="text" size="14" name="password" id="passId">
+							<label class="star">Подтверждение пароля</label>
+							<input type="text" size="14" name="password2">
+                            <div class="text-center">
+                                <button type="submit" class="hvr-outline-out">Зарегистрироваться</button>
+                            </div>
+						</div>
+					</form>
+					<p class="infor"><i>*</i> — обязательные к заполнению поля</p>
+				</div>
+                
+<? } else {?>
+    Вы успешно авторизовались.
+<? } ?><!-- /Header -->
+
+<!-- Footer -->%FOOTER<!-- /Footer -->

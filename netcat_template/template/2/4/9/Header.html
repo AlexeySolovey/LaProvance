@@ -1,0 +1,37 @@
+%HEADER
+
+<?
+    if(!empty($current_user)){
+        $name = $current_user['ForumName'];
+        $phone = $current_user['Phone'];
+        $email = $current_user['Email'];
+    }
+?>
+
+<? if($_GET['ok']==1){?>
+
+    Спасибо за заказ!<br>
+    Мы скоро свяжемся с Вами.
+
+<?} else {?>
+
+Как бы мы могли с Вами связаться?
+<form action="/_cdn/order.php" method="POST">
+    <input type='hidden' name='order' value='true'>
+    <input type='hidden' name='user' value='<?=$AUTH_USER_ID?>'>
+    <input type="hidden" class="cart-json" name="order_json"><br>
+    <input type="text" name="name" placeholder="ФИО" value="<?=$name?>" required><br>
+    <input type="text" name="phone" placeholder="Номер телефона" value="<?=$phone?>" required><br>
+    <input type="email" name="email" placeholder="e-mail" value="<?=$email?>"><br>
+    <br>
+    <input type="submit" id="dropper" value="Отправить">
+</form>
+
+<script>
+    window.addEventListener("DOMContentLoaded",function(){
+        cartJSON();
+        document.getElementById("dropper").onclick = dropCart;
+    });
+</script>
+
+<? } ?>

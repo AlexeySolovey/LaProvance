@@ -1,0 +1,13 @@
+<?php
+
+    $catalogueMenu[0]['prefix'] = "<a name='menu'></a><div class='panel-group' id='accordion'>";
+    $catalogueMenu[0]['unactive'] = "<div class='panel'><div class='panel-heading'><a href='#collapse-%COUNTER' data-parent='#accordion' data-toggle='collapse'><h4 class='panel-title'>%NAME</h4></a></div><div id='collapse-%COUNTER' class='panel-collapse collapse'>%NEXT_LEVEL</div></div>";
+    $catalogueMenu[0]['active'] = "<div class='panel'><div class='panel-heading'><a href='#collapse-%COUNTER' data-parent='#accordion' data-toggle='collapse'><h4 class='panel-title'>%NAME</h4></a></div><div id='collapse-%COUNTER' class='panel-collapse collapse'>%NEXT_LEVEL</div></div>";
+    $catalogueMenu[0]['suffix'] = "</div>";
+    
+    $catalogueMenu[1]['prefix'] = "<div><ul>";
+    $catalogueMenu[1]['unactive'] = "<li><a href='%URL'><span>%NAME</span></a></li>";
+    $catalogueMenu[1]['active'] = "<li><a href='%URL'><span>%NAME</span></a></li>";
+    $catalogueMenu[1]['suffix'] = "</ul></div>";
+    
+?>

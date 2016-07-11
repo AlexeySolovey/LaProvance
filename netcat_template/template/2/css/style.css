@@ -1,0 +1,157 @@
+/*main*/
+iframe {
+  margin-bottom: 30px;
+}
+h2 {
+  color: #846c67;
+}
+label {
+  font-weight: normal;
+}
+header button.serch {
+  margin-top: 5px;
+}
+header button.serch:hover {
+  background: url(../images/serch-active.png);
+}
+header .disk-shope {
+  color: #ff8888;
+  font-family: OpenSans-Light;
+}
+header .login {
+  height: 45px;
+}
+header a img.logo {
+  margin-left: auto;
+  margin-right: auto;
+}
+header input {
+  display: none;
+}
+.navbar .navbar-right .hvr-outline-out {
+  border: 2px solid #846c67;
+}
+.navbar .navbar-right .hvr-outline-out:hover {
+  border: 2px solid #846c67;
+  padding-bottom: 30px;
+}
+.nav > li > a:focus {
+  background: #574340;
+  border: 0;
+  outline: none;
+}
+.hvr-outline-out {
+  border: 1px;
+}
+/*index*/
+.news .img-responsive,
+.discount .img-responsive {
+  width: 100%;
+  max-width: 100%;
+}
+/*register*/
+.registretion .register-block .reg_fields p {
+  font-size: 15px;
+}
+.registretion .register-block .reg_fields .row {
+  margin: 0;
+}
+.registretion .register-block .reg_fields .row label {
+  display: block;
+  text-align: left;
+  font-size: 13px;
+  font-family: OpenSans-Semibold;
+  color: #846c67;
+}
+.registretion .register-block .reg_fields .row label.margin {
+  padding-top: 25px;
+  padding-bottom: 0;
+}
+.registretion .register-block .reg_fields .row label.star:before {
+  content: "*";
+  color: #ff8888;
+  margin-left: -10px;
+}
+.registretion .register-block .reg_fields .row input {
+  width: 100%;
+}
+.registretion .register-block .reg_fields .row .col-xs-1,
+.registretion .register-block .reg_fields .row .col-sm-1,
+.registretion .register-block .reg_fields .row .col-md-1,
+.registretion .register-block .reg_fields .row .col-lg-1,
+.registretion .register-block .reg_fields .row .col-xs-2,
+.registretion .register-block .reg_fields .row .col-sm-2,
+.registretion .register-block .reg_fields .row .col-md-2,
+.registretion .register-block .reg_fields .row .col-lg-2,
+.registretion .register-block .reg_fields .row .col-xs-3,
+.registretion .register-block .reg_fields .row .col-sm-3,
+.registretion .register-block .reg_fields .row .col-md-3,
+.registretion .register-block .reg_fields .row .col-lg-3,
+.registretion .register-block .reg_fields .row .col-xs-4,
+.registretion .register-block .reg_fields .row .col-sm-4,
+.registretion .register-block .reg_fields .row .col-md-4,
+.registretion .register-block .reg_fields .row .col-lg-4,
+.registretion .register-block .reg_fields .row .col-xs-5,
+.registretion .register-block .reg_fields .row .col-sm-5,
+.registretion .register-block .reg_fields .row .col-md-5,
+.registretion .register-block .reg_fields .row .col-lg-5,
+.registretion .register-block .reg_fields .row .col-xs-6,
+.registretion .register-block .reg_fields .row .col-sm-6,
+.registretion .register-block .reg_fields .row .col-md-6,
+.registretion .register-block .reg_fields .row .col-lg-6,
+.registretion .register-block .reg_fields .row .col-xs-7,
+.registretion .register-block .reg_fields .row .col-sm-7,
+.registretion .register-block .reg_fields .row .col-md-7,
+.registretion .register-block .reg_fields .row .col-lg-7,
+.registretion .register-block .reg_fields .row .col-xs-8,
+.registretion .register-block .reg_fields .row .col-sm-8,
+.registretion .register-block .reg_fields .row .col-md-8,
+.registretion .register-block .reg_fields .row .col-lg-8,
+.registretion .register-block .reg_fields .row .col-xs-9,
+.registretion .register-block .reg_fields .row .col-sm-9,
+.registretion .register-block .reg_fields .row .col-md-9,
+.registretion .register-block .reg_fields .row .col-lg-9,
+.registretion .register-block .reg_fields .row .col-xs-10,
+.registretion .register-block .reg_fields .row .col-sm-10,
+.registretion .register-block .reg_fields .row .col-md-10,
+.registretion .register-block .reg_fields .row .col-lg-10,
+.registretion .register-block .reg_fields .row .col-xs-11,
+.registretion .register-block .reg_fields .row .col-sm-11,
+.registretion .register-block .reg_fields .row .col-md-11,
+.registretion .register-block .reg_fields .row .col-lg-11,
+.registretion .register-block .reg_fields .row .col-xs-12,
+.registretion .register-block .reg_fields .row .col-sm-12,
+.registretion .register-block .reg_fields .row .col-md-12,
+.registretion .register-block .reg_fields .row .col-lg-12 {
+  padding: 0;
+}
+/*****************************
+			media
+*****************************/
+@media screen and (min-width: 768px) {
+  .registretion .register-block label {
+    padding: 7px 0 0 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .registretion .register-block .reg_fields .row {
+    padding-left: 10px;
+    margin: 0;
+  }
+  .registretion .register-block .reg_fields .row label {
+    padding: 0;
+    margin-top: 10px;
+  }
+  .registretion .register-block .reg_fields .row label.margin {
+    margin-top: 25px;
+    padding-top: 0;
+  }
+  .registretion .register-block .reg_fields .row input {
+    margin-top: 10px;
+    margin-bottom: 3px;
+    height: 20px;
+  }
+  .registretion .register-block .reg_fields .row input#passId {
+    margin-top: 25px;
+  }
+}

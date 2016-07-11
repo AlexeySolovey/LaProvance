@@ -1,0 +1,22 @@
+/*OPEN SANS*/
+@font-face {
+    font-family: OpenSans;
+    src: url('../fonts/openSans.ttf');
+}
+@font-face {
+	font-family: OpenSans-Light;
+	src: url('../fonts/OpenSans-Light.ttf');
+}
+@font-face {
+	font-family: OpenSans-Semibold;
+	src: url(../fonts/OpenSans-Semibold.ttf);
+}
+@font-face {
+	font-family: OpenSans-Regular;
+	src: url(../fonts/OpenSans-Regular.ttf);
+}
+/*Sansation*/
+@font-face {
+    font-family: sansationRegular;
+    src: url(../fonts/Sansation-Regular.ttf);
+}

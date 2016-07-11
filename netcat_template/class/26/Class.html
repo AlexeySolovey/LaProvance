@@ -1,0 +1,28 @@
+<!-- FormPrefix --><style>
+    .owl .owl-nav{
+        position:absolute;
+        height:0;
+        width:100%;
+        top:0;
+        left:0;
+    }
+    .owl .owl-nav .owl-prev,
+    .owl .owl-nav .owl-next{
+        position:absolute;
+        left:25px;
+        top:125px;
+        font-size:30px;
+    }
+    .owl .owl-nav .owl-next{
+        left:auto;
+        right:25px;
+    }
+</style>
+
+<div class='owl'><!-- /FormPrefix -->
+
+<!-- RecordTemplate --><a href='<?= $f_URL ? $f_URL : "javascript:void(0);" ?>'>
+    <img src="<?=$f_Image?>">
+</a><!-- /RecordTemplate -->
+
+<!-- FormSuffix --></div><!-- /FormSuffix -->

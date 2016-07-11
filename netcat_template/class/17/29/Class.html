@@ -1,0 +1,30 @@
+<!-- FormPrefix --><?
+	// Представление даты
+	function niceDate($input){
+		$input=date("Y-m-d", strtotime($input));
+		$date=explode("-",$input);
+		return $date[2]." ".getMonthText($date[1])." ".$date[0];
+	}
+	
+	// Текущий месяц
+	function getMonthText($a){
+		$month_word = array(1=>'января',2=>'февраля',3=>'марта',4=>'апреля',
+		  5=>'мая',6=>'июня',7=>'июля',8=>'августа',
+		  9=>'сентября',10=>'октября',11=>'ноября',12=>'декабря');
+		return $month_word[intval($a)];
+	}
+?>
+
+<div class="news-block">
+    <h4>Новости</h4><!-- /FormPrefix -->
+
+<!-- RecordTemplate --><div class="event">
+    <span><?=niceDate($f_Date)?></span>
+    <p><?=$f_Name?></p>
+    <a href="<?=$fullLink?>">Подробнее</a>
+</div><!-- /RecordTemplate -->
+
+<!-- FormSuffix -->    <div class="other-news">
+        <a href="/news/">Все новости</a>
+    </div>
+</div><!-- /FormSuffix -->

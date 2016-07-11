@@ -1,0 +1,12 @@
+<?
+
+	// Обрезка текста $text с поиском пробела до символа
+	function textCut($text, $stripos_offset){
+	    if(strlen($text) > $stripos_offset){
+	        $splitPoint = stripos($text, " ", $stripos_offset);
+	        $text = substr($text, 0, $splitPoint)."…";
+	    }
+	    return $text;
+	}
+	
+?>

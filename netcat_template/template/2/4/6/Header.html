@@ -1,0 +1,51 @@
+%HEADER
+
+<? if (!$AUTH_USER_ID) { ?>
+
+<div class="reg">
+  <div>
+    <h4>Зарегистрироваться</h4>
+    <p>Для регистрации укажите пожалуйста свой адрес електронной почты (E-mail)</p>
+    <form action="/registratsiya/" method="POST" id="mail" novalidate="novalidate">
+      <div class="form-group">
+        <label class="phone">
+          E-mail:
+        </label>
+        <input type="text" name="mail" maxlength="30">
+      </div>
+      <div class="text-center">
+        <button type="submit" class="hvr-outline-out">Зарегистрироваться</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="log">
+  <h4>Уже зарегистрированы?</h4>
+  <form action="/_cdn/auth.php" method="POST" id="enter" novalidate="novalidate">
+    <?= $_GET['wrong']==1 ? "<p style='color:#ff8888'>Неверный логин или пароль</p><br>" : null ?>
+    <input type='hidden' name='auth' value='true'>
+    <div class="form-group">
+      <label class="name">
+        Email:
+      </label>
+      <input type="text" name="email" maxlength="30">
+    </div>
+    <div class="form-group">
+      <label class="phone">
+        Пароль:
+      </label>
+      <input type="text" name="password" maxlength="20">
+    </div>
+    <div class="text-center">
+      <button type="submit" class="hvr-outline-out">Ввойти</button>
+    </div>
+  </form>
+  <div class="remember">
+    <a href="#">Забыли пароль?</a>
+  </div>
+</div>
+                
+<? } else { ?>
+    Вы успешно авторизовались.
+<? } ?>

@@ -1,0 +1,10 @@
+<?
+    $browseTemp['unactive'] = "<li><a href='%URL'>%PAGE</a></li>";
+    $browseTemp['active'] = "<li class='active'><a class='active' href='%URL'>%PAGE</a></li>";
+?>
+
+<?if($totRows > 10){?>
+    <div class='row text-center'><ul class='paginat'><li><a href='<?=$prevLink?>'>< Назад</a></li>
+    <?= nc_browse_messages($cc_env, 10, $browseTemp); ?>
+    <li><a href='<?=$nextLink?>'>Далее ></a></li></ul></div>
+<?}?>

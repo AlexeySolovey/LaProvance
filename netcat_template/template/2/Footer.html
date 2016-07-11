@@ -1,0 +1,58 @@
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="footer-menu">
+                <?= nc_browse_sub(0, $firstFooterMenuTemp, 0, " Subdivision_ID <= 5 ") ?>
+                <?= nc_browse_sub(0, $secondFooterMenuTemp, 0, " Subdivision_ID > 5 ") ?>
+				<div class="col-xs-12 col-md-push-3 col-md-4">
+					<?=$current_catalogue['Contacts']?>
+				</div>
+				<div class="col-xs-12 col-md-pull-4 col-md-3">
+					<ul class="social">
+						<li><a href="<?=$current_catalogue['linkVK']?>" class="vk"></a></li>
+						<li><a href="<?=$current_catalogue['linkFB']?>" class="fb"></a></li>
+						<li><a href="<?=$current_catalogue['linkOK']?>" class="odnoklasniki"></a></li>
+						<li><a href="<?=$current_catalogue['linkIG']?>" class="instagram"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="row text-center">
+			<div class="col-xs-12">
+				<img src="<?=$nc_parent_template_folder_path?>images/logo-footer.png">
+				<p>Copyright &copy; магазин постельного белья "Ля Прованс" 2011 &ndash; <?= date("Y"); ?></p>
+			</div>
+		</div>
+		<div class=" row scroll-up">
+			<a href="#top" class="back-top"></a>
+		</div>
+	</div>
+</footer>
+
+<script src="<?=$nc_parent_template_folder_path?>js/jquery-1.11.3.min.js"></script>
+<script src="<?=$nc_parent_template_folder_path?>js/jquery-validate-v1.15.js"></script>
+<script src="<?=$nc_parent_template_folder_path?>js/bootstrap.js"></script>
+<script src="<?=$nc_parent_template_folder_path?>js/reg-check.js"></script>
+<script src="<?=$nc_parent_template_folder_path?>js/serch.js"></script>
+<script src="<?=$nc_parent_template_folder_path?>js/scroll-up.js"></script>
+<script src="/_cdn/cart.js"></script>
+<script src="/_cdn/owl/owl.carousel.min.js"></script>
+
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="/_cdn/fancy/source/jquery.fancybox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/_cdn/fancy/source/jquery.fancybox.pack.js"></script>
+<script>
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+        $(".owl").owlCarousel({
+            items: 1,
+            nav: true,
+            navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
+            loop: true
+        });
+	});
+</script>
+
+
+</body>
+</html>

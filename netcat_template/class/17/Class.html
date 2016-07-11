@@ -1,0 +1,28 @@
+<!-- FormPrefix --><?
+
+	// Обрезка текста $text с поиском пробела до символа
+	function textCut($text, $stripos_offset){
+	    if(strlen($text) > $stripos_offset){
+	        $splitPoint = stripos($text, " ", $stripos_offset);
+	        $text = substr($text, 0, $splitPoint)."…";
+	    }
+	    return $text;
+	}
+	
+?><!-- /FormPrefix -->
+
+<!-- RecordTemplate --><div class="goods">
+  <a href="<?=$fullLink?>">
+    <img src="<?=$f_Image?>" class="img-responsive">
+  </a>
+  <div class="information news">
+    <p class="describe"><?=$f_Name?></p>
+    <p class="text "><?=textCut($f_Text, 200)?></p>
+  </div>
+</div><!-- /RecordTemplate -->
+
+<!-- FormSuffix --><?if($totRows > 10){?>
+    <div class='row text-center'><ul class='paginat'><li><a href='<?=$prevLink?>'>< Назад</a></li>
+    <?= nc_browse_messages($cc_env, 10, $browseTemp); ?>
+    <li><a href='<?=$nextLink?>'>Далее ></a></li></ul></div>
+<?}?><!-- /FormSuffix -->

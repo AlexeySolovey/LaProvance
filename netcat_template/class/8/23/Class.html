@@ -1,0 +1,35 @@
+<!-- FormPrefix --><?
+    if($totRows == 0){
+        echo "    К сожалению, ничего не удалось найти.";
+    }  
+?><!-- /FormPrefix -->
+
+<!-- RecordTemplate -->				<div class="goods">
+					<a href="<?=$fullLink?>">
+						<img src="<?=$f_Image?>" class="img-responsive">
+					</a>
+					<div class="information">
+						<p class="describe"><?=$f_Name?></p>
+                        <?if(!empty($f_Size)){ ?>
+						    <p class="size">Размер: <?=$f_Size?></p>
+                        <?}?>
+						<p class="code">Код: <?=$f_Code?></p>
+						<p class="fabric">Производитель: <?=$f_Vendor?></p>
+						<?if(!empty($f_Price_OLD)){ ?>
+                            <span class="past-price"><?=$f_Price_OLD?> грн</span>
+                        <?}?>
+						<span class="now-price"><?=$f_Price?> грн</span>
+						<button type="button" onclick="addToCart(<?=$f_RowID?>); document.location.reload();" class="hvr-outline-out">В КОРЗИНУ</button>
+					</div>
+				</div><!-- /RecordTemplate -->
+
+<!-- FormSuffix --><?
+    $browseTemp['unactive'] = "<li><a href='%URL'>%PAGE</a></li>";
+    $browseTemp['active'] = "<li class='active'><a class='active' href='%URL'>%PAGE</a></li>";
+?>
+
+<?if($totRows > 10){?>
+    <div class='row text-center'><ul class='paginat'><li><a href='<?=$prevLink?>'>< Назад</a></li>
+    <?= nc_browse_messages($cc_env, 10, $browseTemp); ?>
+    <li><a href='<?=$nextLink?>'>Далее ></a></li></ul></div>
+<?}?><!-- /FormSuffix -->

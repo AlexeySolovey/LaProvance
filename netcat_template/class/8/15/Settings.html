@@ -1,0 +1,8 @@
+<?
+
+    $ignore_sub = $ignore_cc = true;
+    // Подчиненные разделы
+    $childSubs = $db->get_var("SELECT GROUP_CONCAT(Subdivision_ID) FROM Subdivision WHERE Parent_Sub_ID ='".$sub."'");
+    $query_where = " a.Subdivision_ID IN (".$childSubs.") ";
+
+?>

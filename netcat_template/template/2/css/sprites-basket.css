@@ -1,0 +1,48 @@
+.left, .left-active, .right, .right-active, .big-bag{
+	background: url(../images/sprites-basket.png) no-repeat;
+}
+
+.left{
+	background-position: 0 0;
+	width: 8px;
+	height: 12px;
+	position: absolute;
+	margin-left: -15px;
+	margin-top: 5px;
+}
+
+.left:hover{
+	background-position: -13px 0;
+	width: 8px;
+	height: 11px;
+	position: absolute;
+	margin-left: -15px;
+	margin-top: 5px;
+}
+
+.right{
+	background-position: -31px 0;
+	width: 8px;
+	height: 11px;
+	position: absolute;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+
+.right:hover{
+	background-position: -46px 0;
+	width: 8px;
+	height: 11px;
+	position: absolute;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+
+.big-bag{
+	background-position: 0 -20px ;
+	width: 48px;
+	height: 54px;
+	float:right;
+	margin-top: 14px;
+}
+

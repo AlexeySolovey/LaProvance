@@ -1,0 +1,31 @@
+<!-- FormPrefix --><div class="container">
+<div class="news">
+			<div class="row">
+				<div class="col-xs-12">
+					<h4 class="text-center">Скидки</h4>
+				</div>
+			</div>
+			<div class="row">
+				
+<!-- /FormPrefix -->
+
+<!-- RecordTemplate --><div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+  <a href="<?=$fullLink?>">
+    <img src="<?=$f_Image?>" class="img-responsive">
+  </a>
+  <div class="information">
+    <p class="describe"><?=$f_Name?></p>
+    <? if($f_Size) { ?>
+    <p class="size"><?=$f_Size?></p>
+    <? } ?>
+    <? if($f_Price_OLD) { ?>
+    <span class="past-price"><?=number_format($f_Price_OLD,2,","," ")?> грн</span>
+    <? } ?>
+    <span class="now-price"><?=number_format($f_Price,2,","," ")?> грн</span>
+    <button type="button" onclick="addToCart(<?=$f_RowID?>); document.location.reload();" class="hvr-outline-out">В КОРЗИНУ</button>
+  </div>
+</div><!-- /RecordTemplate -->
+
+<!-- FormSuffix -->    </div>
+</div>
+</div><!-- /FormSuffix -->
